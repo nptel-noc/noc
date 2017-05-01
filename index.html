@@ -55,14 +55,15 @@
 
     <!-- Always shows a header, even in smaller screens. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
+        <header class="mdl-layout__header mdlext-layout__sticky-header mdlext-js-sticky-header">
             <div class="mdl-layout__header-row">
                 <!-- Add spacer, to align title in the center on small screens -->
                 <div class="mdl-layout--small-screen-only mdl-layout-spacer"></div>
                 <!-- Title -->
-                <span class="mdl-layout-title"><h3>NOC Online Certification</h3></span>
+                <span id="header-title" class="mdl-layout-title">NPTEL Online Certification</span>
             </div>
         </header>
+        
         <main class="mdl-layout__content">
             <div class="page-content mdl-grid">
                 Page content goes here.

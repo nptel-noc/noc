@@ -83,3 +83,7 @@ body {
 .mdl-layout__content>*:not(.mdl-layout-spacer) {
     flex: none;
 }
+
+.mdl-layout-title {
+    font-weight: bold;
+}
