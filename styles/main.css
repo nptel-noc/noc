@@ -27,14 +27,6 @@ body {
     padding: 0;
 }
 
-.mdl-demo .mdl-layout__header-row {
-    padding-left: 40px;
-}
-
-.mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {
-    font-size: inherit;
-}
-
 .mdl-demo .mdl-card {
     height: auto;
     display: flex;
@@ -52,10 +44,6 @@ body {
     flex-grow: 1;
     padding: 0;
     color: inherit;
-}
-
-.gradient_background {
-    background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
 }
 
 .mdl-card__media {
@@ -90,6 +78,18 @@ body {
 
 .mdl-menu__item > a {
     color: #3e4eb8;
-    font-weight: normal;
     text-decoration: none;
+}
+
+.carousel {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
 }
