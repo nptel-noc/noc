@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOC Homepage</title>
-    
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="./images/icon.png">
 
@@ -57,13 +57,28 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header mdlext-layout__sticky-header mdlext-js-sticky-header">
             <div class="mdl-layout__header-row">
-                <!-- Add spacer, to align title in the center on small screens -->
-                <div class="mdl-layout--small-screen-only mdl-layout-spacer"></div>
                 <!-- Title -->
                 <span id="header-title" class="mdl-layout-title">NPTEL Online Certification</span>
+                <!-- Add spacer, to align navigation to right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation for large screens -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="#">About Us</a>
+                    <a class="mdl-navigation__link" href="#">FAQ</a>
+                    <a class="mdl-navigation__link" href="#">Contact Us</a>
+                    <a class="mdl-navigation__link" href="#">Exam Results Login</a>
+                </nav>
+                <!-- Navigation for small screens -->
+                <div class="mdl-layout--small-screen-only">
+                    <button id="nav-menu" class="mdl-button mdl-js-button mdl-button--icon"><span><i class="material-icons">menu</i></span></button>
+                </div>
+                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="nav-menu">
+                    <li class="mdl-menu__item"><a href="#">About Us</a></li>
+                    <li class="mdl-menu__item"><a href="#">FAQ</a></li>
+                    <li class="mdl-menu__item"><a href="#">Contact Us</a></li>
+                </ul>
             </div>
         </header>
-        
         <main class="mdl-layout__content">
             <div class="page-content mdl-grid">
                 Page content goes here.

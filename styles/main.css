@@ -87,3 +87,9 @@ body {
 .mdl-layout-title {
     font-weight: bold;
 }
+
+.mdl-menu__item > a {
+    color: #3e4eb8;
+    font-weight: normal;
+    text-decoration: none;
+}
