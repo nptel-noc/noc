@@ -52,7 +52,7 @@
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    
+
     <!-- Font Awesome -->
     <script src="https://use.fontawesome.com/f51258b74c.js"></script>
 </head>
@@ -88,19 +88,46 @@
             </div>
         </header>
         <main class="mdl-layout__content">
-            <div class="page-content mdl-grid" id="page-content" style="width: 100%;">
-                <div class="mdl-cell mdl-card mdl-shadow--8dp mdl-cell--3-offset-desktop mdl-cell--6-col-desktop mdl-cell--2-offset-tablet mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+            <div class="page-content mdl-grid" id="page-content">
+                <div class="mdl-cell mdl-card mdl-shadow--8dp mdl-cell--1-offset-desktop mdl-cell--10-col-desktop mdl-cell--1-offset-tablet mdl-cell--6-col-tablet mdl-cell--4-col-phone">
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Contact Us</h2>
+                        <h2 class="mdl-card__title-text">Frequently Asked Questions</h2>
                     </div>
-                    <hr>
-                    <div style="padding: 20px;">
-                        NPTEL<br>
-                        2nd floor, Central Library<br>
-                        IIT Madras<br>
-                        Chennai – 600036<br>
-                        <i class="material-icons" style="vertical-align: middle;">email</i>&nbsp; <a href="mailto:nptel@iitm.ac.in">nptel@iitm.ac.in</a><br>
-                        <i class="material-icons" style="vertical-align: middle;">phone</i>&nbsp; (044) 22575905/22575908
+                    <div class="mdl-card__border">
+                        <ul id="my-accordion" class="mdlext-accordion mdlext-js-accordion mdlext-accordion--vertical mdlext-js-ripple-effect" role="tablist" aria-multiselectable="false">
+                            <li class="mdlext-accordion__panel" role="presentation">
+                                <header class="mdlext-accordion__tab" role="tab" aria-expanded="true">
+                                    <i class="material-icons">dns</i>
+                                    <span class="mdlext-accordion__tab__caption">First section. A long caption should not push the state icon</span>
+                                    <i class="mdlext-aria-toggle-material-icons"></i>
+                                </header>
+                                <section class="mdlext-accordion__tabpanel" role="tabpanel" aria-hidden="false">
+                                    <h5>Content #1 goes here</h5>
+                                    <p>Some content <a href="#">with an anchor</a> as a focusable element.</p>
+                                </section>
+                            </li>
+                            <li class="mdlext-accordion__panel" role="presentation">
+                                <header class="mdlext-accordion__tab" role="tab" aria-expanded="false">
+                                    <i class="material-icons">all_inclusive</i>
+                                    <span class="mdlext-accordion__tab__caption">Tab #2</span>
+                                    <i class="mdlext-aria-toggle-material-icons"></i>
+                                </header>
+                                <section class="mdlext-accordion__tabpanel" role="tabpanel" aria-hidden="true" hidden>
+                                    <h5>Content #2 goes here</h5>
+                                    <p>Some content....</p>
+                                </section>
+                            </li>
+                            <li class="mdlext-accordion__panel" role="presentation">
+                                <header class="mdlext-accordion__tab" role="tab" aria-expanded="false">
+                                    <i class="material-icons">build</i>
+                                    <span class="mdlext-accordion__tab__caption">Tab #3</span>
+                                    <i class="mdlext-aria-toggle-material-icons"></i>
+                                </header>
+                                <section class="mdlext-accordion__tabpanel" role="tabpanel" aria-hidden="true" hidden>
+                                    <h5>Content #3 goes here</h5>
+                                </section>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -128,9 +155,7 @@
                     </div>
                     <div class="mdl-mega-footer__drop-down-section">
                         <h1 class="mdl-mega-footer__heading">Contact Us</h1>
-                        <i class="material-icons" style="vertical-align: middle;">location_on</i>&nbsp; NPTEL Webstudio<br>
-                        IC & SR building, 3rd Floor<br>
-                        IIT Madras<br>
+                        <i class="material-icons" style="vertical-align: middle;">location_on</i>&nbsp; NPTEL Webstudio<br> IC & SR building, 3rd Floor<br> IIT Madras<br>
                         <i class="material-icons" style="vertical-align: middle;">email</i>&nbsp; nptel@iitm.ac.in<br>
                         <i class="material-icons" style="vertical-align: middle;">phone</i>&nbsp; (044) 22575905/22575908
                     </div>
@@ -142,6 +167,15 @@
     <script src="./node_modules/material-design-lite/material.min.js"></script>
     <script src="./node_modules/mdl-ext/lib/mdl-ext.min.js"></script>
     <script src="./node_modules/eq.js/dist/eq.min.js"></script>
+    <script>
+        'use strict';
+        window.addEventListener('load', function() {
+            var accordion = document.querySelector('#my-accordion');
+            accordion.addEventListener('toggle', function(e) {
+                console.log('Accordion toggled. State:', e.detail.state, 'Source:', e.detail.tab);
+            });
+        });
+    </script>
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

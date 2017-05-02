@@ -71,7 +71,7 @@
                 <nav class="mdl-navigation mdl-layout--large-screen-only">
                     <a class="mdl-navigation__link" href="./index.html"><b>Home</b></a>
                     <a class="mdl-navigation__link" href="./aboutus.html"><b>About Us</b></a>
-                    <a class="mdl-navigation__link" href="#"><b>FAQ</b></a>
+                    <a class="mdl-navigation__link" href="./faq.html"><b>FAQ</b></a>
                     <a class="mdl-navigation__link" href="./contactus.html"><b>Contact Us</b></a>
                     <a class="mdl-navigation__link" href="#"><b>Exam Results Login</b></a>
                 </nav>
@@ -82,7 +82,7 @@
                 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="nav-menu">
                     <li class="mdl-menu__item"><a href="./index.html">Home</a></li>
                     <li class="mdl-menu__item"><a href="./aboutus.html">About Us</a></li>
-                    <li class="mdl-menu__item"><a href="#">FAQ</a></li>
+                    <li class="mdl-menu__item"><a href="./faq.html">FAQ</a></li>
                     <li class="mdl-menu__item"><a href="./contactus.html">Contact Us</a></li>
                 </ul>
             </div>
@@ -93,6 +93,7 @@
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">NPTEL Online Certification</h2>
                     </div>
+                    <hr>
                     <div class="mdl-card__border" style="padding: 20px;">
                         <p><i class="material-icons" style="vertical-align: middle;">fiber_manual_record</i>NPTEL has completed 12 years since inception and we have 850 web and video courses across 23 disciplines. We have begun the initiative of certification for these courses created in a phased manner, so that students may see tangible end result in the form of a certificate from the Centre for Continuing Education, IIT for their effort.</p>
                         <p><i class="material-icons" style="vertical-align: middle;">fiber_manual_record</i>The main benefits of participating in an online course under NPTEL are that the student can review and assess his own progress week after week and also get his doubts clarified mutually or by the faculty in charge or by mentors, immediately, which enables him understand the subject better.</p>
@@ -111,7 +112,7 @@
                         <ul class="mdl-mega-footer__link-list">
                             <li><a href="./index.html">Home</a></li>
                             <li><a href="./aboutus.html">About Us</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="./faq.html">FAQ</a></li>
                             <li><a href="./contactus.html">Contact Us</a></li>
                         </ul>
                     </div>
@@ -138,58 +139,6 @@
     <script src="./node_modules/material-design-lite/material.min.js"></script>
     <script src="./node_modules/mdl-ext/lib/mdl-ext.min.js"></script>
     <script src="./node_modules/eq.js/dist/eq.min.js"></script>
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("slide");
-            if (n > x.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = x.length
-            };
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
-        }
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("slide");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > x.length) {
-                slideIndex = 1
-            }
-            x[slideIndex - 1].style.display = "block";
-            setTimeout(carousel, 2000); // Change image every 2 seconds
-        }
-
-    </script>
-    <script>
-        var h = $("#carousel").height();
-        $("#page-content").css('margin-top', h / 2);
-        $("#left").css('margin-top', (h / 2) - 5);
-        $("#right").css('margin-top', (h / 2) - 5);
-        $(window).resize(function() {
-            var h = $("#carousel").height();
-            $("#page-content").css('margin-top', h / 2);
-            $("#left").css('margin-top', (h / 2) - 5);
-            $("#right").css('margin-top', (h / 2) - 5);
-        
-        });
-    </script>
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
